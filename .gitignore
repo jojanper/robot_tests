@@ -1,0 +1,6 @@
+node_modules
+.vscode
+log.html
+report.html
+output.xml
+virtualenv
