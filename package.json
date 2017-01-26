@@ -16,7 +16,8 @@
     "setup": "node scripts/virtualenv",
     "prepare": "pip install -r requirements.txt",
     "test": "PATH=./drivers/linux64:${PATH} robot e2e_tests/ng2_app",
-    "push-remote": "for r in $(git remote); do git push $r master; done"
+    "push-remote": "for r in $(git remote); do git push $r master; done",
+    "clean": "rimraf log.html output.xml report.html"
   },
   "keywords": [
     "Test automation",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "shelljs": "^0.7.5",
     "minimist": "^1.2.0",
-    "log-symbols": "^1.0.2"
+    "log-symbols": "^1.0.2",
+    "rimraf": "^2.5.4"
   }
 }
