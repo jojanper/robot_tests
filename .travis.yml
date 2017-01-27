@@ -8,11 +8,27 @@ install:
     # Grab NVM and Checkout the latest stable tag.
     # Install the desired version of Node
     - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+    #
+    # Setup project
+    #
     - npm install
     - npm run prepare
+    #
+    # Add Chrome.
+    #
+    - export CHROME_BIN=/usr/bin/google-chrome
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+    - sudo apt-get update
+    - sudo apt-get install -y libappindicator1 fonts-liberation
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - sudo dpkg -i google-chrome*.deb
+    #
+    # Clone ng2-app
+    #
     - git clone https://github.com/jojanper/ng2-app.git
     - cd ng2-app
     - npm install
-    - npm start
+    - npm start&
 script:
     - npm test
