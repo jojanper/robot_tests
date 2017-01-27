@@ -25,6 +25,8 @@ install:
     - cd ng2-app
     - npm install
     - npm start&
+    - cd ..
+    - sleep 15
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start &
