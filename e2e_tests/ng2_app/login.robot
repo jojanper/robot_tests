@@ -17,7 +17,7 @@ Valid Login
     Then home page should be open
 
 *** Keywords ***
-UnAuthenticated user
+Unauthenticated user
     Open Browser To Login Page
 
 Browser is opened to login page
@@ -25,9 +25,6 @@ Browser is opened to login page
 
 Unauthenticated user opens home page
     Open page    ${WELCOME URL}
-
-User is redirected to login page
-    Login page should be open
 
 User "${username}" logs in with password "${password}"
     Input username    ${username}

@@ -14,6 +14,7 @@ ${DELAY}             0
 ${VALID USER}        test
 ${VALID PASSWORD}    password
 ${LOGIN URL}         http://${SERVER}/#/login
+${LOGOUT URL}        http://${SERVER}/#/logout
 ${WELCOME URL}       http://${SERVER}/#/home
 ${TITLE}             Draal App Playground using Angular2
 
@@ -49,3 +50,13 @@ Submit Credentials
 Home Page Should Be Open
     Location Should Be    ${WELCOME URL}
     Title Should Be    ${TITLE}
+
+User Has Authenticated To System
+    Open Browser To Login Page
+    Input Username    ${VALID USER}
+    Input Password    ${VALID PASSWORD}
+    Submit Credentials
+    Home Page Should Be Open
+
+User Is Redirected To Login Page
+    Login page should be open
