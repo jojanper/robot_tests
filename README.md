@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jojanper/robot_tests.svg?branch=master)](https://travis-ci.org/jojanper/robot_tests)
+
 # robot_tests
 
 > Automation tests using [Robot Framework](http://robotframework.org/).
@@ -18,3 +20,6 @@ This installs NPM, virtualenv and library (both npm and python) dependencies.
 clone https://github.com/jojanper/ng2-app and start application
 robot e2e_tests/ng2_app
 ```
+
+### Travis CI
+https://travis-ci.org/jojanper/robot_tests
