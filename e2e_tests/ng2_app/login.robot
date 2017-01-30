@@ -20,9 +20,6 @@ Valid Login
 Unauthenticated user
     Open Browser To Login Page
 
-Browser is opened to login page
-    Open browser to login page
-
 Unauthenticated user opens home page
     Open page    ${WELCOME URL}
 

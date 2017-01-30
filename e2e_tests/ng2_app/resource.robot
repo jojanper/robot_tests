@@ -16,6 +16,8 @@ ${VALID PASSWORD}    password
 ${LOGIN URL}         http://${SERVER}/#/login
 ${LOGOUT URL}        http://${SERVER}/#/logout
 ${WELCOME URL}       http://${SERVER}/#/home
+${ABOUT URL}         http://${SERVER}/#/about
+${TEST URL}          http://${SERVER}/#/test
 ${TITLE}             Draal App Playground using Angular2
 
 *** Keywords ***
@@ -47,6 +49,10 @@ Input Password
 Submit Credentials
     Click Button    xpath=//form//button
 
+Click header link
+    [Arguments]    ${name}
+    Click Element    xpath=//header//nav//a[text()=${name}]
+
 Home Page Should Be Open
     Location Should Be    ${WELCOME URL}
     Title Should Be    ${TITLE}
@@ -60,3 +66,6 @@ User Has Authenticated To System
 
 User Is Redirected To Login Page
     Login page should be open
+
+Browser Is Opened To Login Page
+    Open browser to login page

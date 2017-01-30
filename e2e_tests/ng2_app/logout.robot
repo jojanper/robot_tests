@@ -11,4 +11,4 @@ User sign-out
 
 *** Keywords ***
 User does log-out
-    Open page    ${LOGOUT URL}
+    Click header link    "Sign out"
