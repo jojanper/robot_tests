@@ -27,6 +27,9 @@ Open Browser To Login Page
     Set Selenium Speed    ${DELAY}
     Login Page Should Be Open
 
+User does log-out
+    Click header link    "Sign out"
+
 Login Page Should Be Open
     Location Should Contain    ${LOGIN URL}
 
@@ -53,6 +56,10 @@ Click header link
     [Arguments]    ${name}
     Click Element    xpath=//header//nav//a[text()=${name}]
 
+Click tab
+    [Arguments]    ${name}
+    Click Element    xpath=//ngb-tabset//li//a[contains(text(), ${name})]
+
 Home Page Should Be Open
     Location Should Be    ${WELCOME URL}
     Title Should Be    ${TITLE}
@@ -69,3 +76,11 @@ User Is Redirected To Login Page
 
 Browser Is Opened To Login Page
     Open browser to login page
+
+User clicks test page link
+    Click header link    "Test page"
+
+Alert messages count is
+    [Arguments]    ${refCount}
+    ${Count}=    Get matching xpath count    //ngb-tabset//button
+    Should Be Equal    ${Count}    ${refCount}

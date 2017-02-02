@@ -10,5 +10,3 @@ User sign-out
     Then user is redirected to login page
 
 *** Keywords ***
-User does log-out
-    Click header link    "Sign out"

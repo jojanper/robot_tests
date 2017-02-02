@@ -26,9 +26,6 @@ User clicks home page link
 User clicks about page link
     Click header link    "About"
 
-User clicks test page link
-    Click header link    "Test page"
-
 Home page is opened
     Location Should Contain    ${WELCOME URL}
 
