@@ -12,13 +12,13 @@ ${BROWSER}           Chrome
 ${DELAY}             0
 
 ${VALID USER}        test
-${VALID PASSWORD}    password
+${VALID PASSWORD}    password2
 ${LOGIN URL}         http://${SERVER}/#/login
 ${LOGOUT URL}        http://${SERVER}/#/logout
 ${WELCOME URL}       http://${SERVER}/#/home
 ${ABOUT URL}         http://${SERVER}/#/about
 ${TEST URL}          http://${SERVER}/#/test
-${TITLE}             Draal App Playground using Angular2
+${TITLE}             Draal App Playground using Angular
 
 *** Keywords ***
 Open Browser To Login Page

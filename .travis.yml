@@ -19,10 +19,10 @@ install:
     - npm install
     - npm run prepare
     #
-    # Clone ng2-app and start development server
+    # Clone angular-app and start development server
     #
-    - git clone https://github.com/jojanper/ng2-app.git
-    - cd ng2-app
+    - git clone https://github.com/jojanper/angular-app.git
+    - cd angular-app
     - npm install
     - npm start&
     - cd ..
