@@ -26,9 +26,9 @@ install:
     - npm install
     - npm start&
     - cd ..
-    - sleep 50
+    - sleep 60
     - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start &
+    - sh -e /etc/init.d/xvfb start
 script:
     # Run automation tests
     - npm test
